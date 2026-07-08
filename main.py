@@ -1,10 +1,18 @@
 import url_rules
 
 eingabe_url = input("Bitte geben sie die URL die sie ueberpruefen moechten ein:")
+punkte_in_flensburg = 0
 
-if url_rules.pruefeURL(eingabe_url) == True:
-    print("\nDie von ihnen eingegeben URL ist verdaechtig!! :(")
-elif url_rules.pruefeURL(eingabe_url) == False:
-    print("\nDie von ihnen eingegeben URL ist sicher!! :)")
+begruendung = url_rules.pruefeURL(eingabe_url)
+
+for i in begruendung:
+    if begruendung[i] == 1:
+        punkte_in_flensburg += 1
+        print(f"Regel {i}: ist ausgeschlagen!!")
+    elif begruendung[i] == 0:
+        print(f"Regel {i}: ist nicht ausgeschlagen :))")
+
+if punkte_in_flensburg > 1:
+    print("Daraus folgt das die gesamte URL verdaechtig ist!")
 else:
-    print("\nFehler Bitte erneut versuchen")
+    print("Daraus folgt das die gesamte URL sicher ist!")
