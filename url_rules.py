@@ -19,7 +19,7 @@ def rule3(url, begruendung):     #prueft wie viele Punkte in der URL vorkommen f
         begruendung["zu Viele Punkte"] = 0
     
 def rule4(url, begruendung):
-    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "account", "password", "band", "service", "wallet", "transaction"]
+    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "account", "password", "bank", "service", "wallet", "transaction"]
 
     for i in liste_mit_verdaechtigen_woertern:
         if i in url:
