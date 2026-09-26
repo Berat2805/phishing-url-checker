@@ -1,5 +1,6 @@
 # Phishing-URL-checker-
 Bei diesem Projekt handelt es sich um ein einfaches Anfängerprojekt von einem IT-Sicherheitsstudenten, das häufige Phishing-Merkmale in einer URL überprüft und diese Markiert. 
+
 ##Übersicht 
 
 Der Phishing Checker ist ein auf python basiertes Projekt das als portfolio Projekt aufgebaut wurde um sich mit Praktischen IT-Sicherheits Konzepten auseinander zusetzen. Es benutzt dabei eine von einem Benutzer eingegebene URL und überprüft typische Phishing Merkmale, liefert basierend darauf ein Risiko score, und dazu ein Ergebnis mit Passsender Begründung.
