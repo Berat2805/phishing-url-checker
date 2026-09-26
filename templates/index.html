@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phishing URL checker</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style1.css') }}">
+    </head>
+    <body>
+        <h1>Welcome to the Phishing checker</h1>
+
+        <form method="post" action="/">
+            <input id="url"type="text" name="theUrl" placeholder="Please enter your URL">
+        </form>
+
+            {%if punkte is not none%}
+            <fieldset>
+                <legend><strong>Results</strong></legend>
+
+                <p><strong>URL:</strong> {{ url }}</p>
+                <p><strong>Points:</strong> {{ punkte }}</p>
+                <p class="{%if punkte >= 4%}
+                    danger
+                    {%elif punkte >= 2%}
+                    warning
+                    {%elif punkte == 0%}
+                    safe
+                    {%endif%}">
+                    <strong>Feedback:</strong> {{ feedback }}</p>
+
+                {%if punkte != 0%}
+                    <p><strong>Explanation:</strong><ul>
+                        {%for i in begruendung:%}
+                            {%if begruendung[i] > 0:%}
+                                <li>{{i}}!</li>
+                            {%endif%}
+                        {%endfor%}
+                    </ul></p>
+                {%endif%}
+            </fieldset>
+            {%endif%}
+        
+    </body>
+
+</html>

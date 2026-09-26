@@ -1,0 +1,56 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+#url {
+    width: 300px;
+    height: 20px;
+    font-size: 20px;
+    padding: auto;
+    text-align: center;
+}
+
+form {
+    margin: 100px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, serif;
+    background-color:rgb(26, 26, 26);
+    color: white;
+}
+
+fieldset {
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.result-box {
+    text-align: center;
+}
+
+.safe {
+    color: limegreen;
+}
+
+.warning {
+    color: orange;
+}
+
+.danger {
+    color: red;
+}
+
+legend {
+    font-size: 40px;
+    text-decoration: underline;
+}
