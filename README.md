@@ -1,19 +1,18 @@
 # Phishing-URL-checker-
-A beginner-friendly cybersecurity project that analyzes URLs and flags common phishing indicators using rule-based detection.
+Bei diesem Projekt handelt es sich um ein einfaches Anfängerprojekt von einem IT-Sicherheitsstudenten, das häufige Phishing-Merkmale in einer URL überprüft und diese Markiert. 
+##Übersicht 
 
-##Overview 
+Der Phishing Checker ist ein auf python basiertes Projekt das als portfolio Projekt aufgebaut wurde um sich mit Praktischen IT-Sicherheits Konzepten auseinander zusetzen. Es benutzt dabei eine von einem Benutzer eingegebene URL und überprüft typische Phishing Merkmale, liefert basierend darauf ein Risiko score, und dazu ein Ergebnis mit Passsender Begründung.
 
-This project is a Python-based phishing URL checker built as a portfolio project for learning practical IT security concepts. It evaluates a user-provided URL, assigns a risk score, and explains why a link may be suspicious instead of returning only a simple yes/no result.
-
-The goal is to build an explainable security tool that demonstrates secure thinking, basic threat detection, input validation, and clean project documentation.
+Das Ziel des Ganzen ist es ein erklärbares Werkzeug zu bauen das sicheres Denken sowie, einfache Gefahrenerkennung, Eingabevalidierung und saubere Dokumentation zeigt.
 
 ## Features
 
-- Analyze user-submitted URLs for common phishing patterns.
-- Detect suspicious indicators such as raw IP addresses, excessive URL length, many subdomains, special characters, and risky keywords.
-- Assign a simple risk score and verdict such as `Safe`, `Suspicious`, or `Likely Phishing`.
-- Return human-readable reasons for the verdict.
-- Provide a simple interface through the command line or a small web UI.
+- Analyse einer benutzereingegebenen URL auf Phishing-Muster.
+- Erkennung verschiedener Faktoren wie, verdächtige Symbole/Zahlen/Wörter, Verwendung von http statt https, Lookalikes (1 statt l) in der URl.
+- Bewertung anhand eines Scores, mit verschiedenen Gewichtungen für jede Regel. Daraus folgt dann eine Ausgabe mit sicher, verdächtig, und sehr     verdächtig.
+- Ausgabe eines Begründung die für jeden verständlich ist.
+- Eine Benutzeroberfläche mit einer Eingabe für die Url und einer Ausgabe mit dem Ergebnis.
 - Keep the logic modular so additional rules or APIs can be added later.
 
 ## Example Checks
