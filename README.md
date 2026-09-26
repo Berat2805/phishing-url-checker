@@ -32,10 +32,10 @@ The checker can include rules such as:
 
 ## Beschreibung
 
-main.py ist der Checker ohne UI und funktioniert nur über die Komandozeile im Terminal.
-app.py ist die Version mit der UI und läuft über den Browser, sie läuft mit flask in Kombination mit der html Datei für die Webseite.
-in url_rules.py befinden sich die Regeln auf die die Url überprüft wird, sie liefert den score und die Begründung.
-index.html ist die Webseite, style1.css ist für das Design verantwortlich.
+- main.py ist der Checker ohne UI und funktioniert nur über die Komandozeile im Terminal.
+- app.py ist die Version mit der UI und läuft über den Browser, sie läuft mit flask in Kombination mit der html Datei für die Webseite.
+- In url_rules.py befinden sich die Regeln auf die die Url überprüft wird, sie liefert den score und die Begründung.
+- index.html ist die Webseite, style1.css ist für das Design verantwortlich.
 
 ```text
 phishing-url-checker/
