@@ -10,7 +10,7 @@ def home():
     punkte = None
     feedback = None
     begruendung = None
-    
+
     if request.method == "POST":
 
         url = request.form["theUrl"]
@@ -24,6 +24,8 @@ def home():
             feedback = "Die URL ist sehr verdaechtig!!"
         elif punkte >= 2:
             feedback = "Die URL ist verdaechtig!!"
+        elif punkte >= 1:
+            feedback = "Die URL sollte überprüft werden!!"
         elif punkte == 0:
             feedback = "Die URL ist sicher! :)"
         
