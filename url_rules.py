@@ -47,12 +47,12 @@ def rule_words_host(host, begruendung):
     
     host = host.lower()
 
-    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "account", "password", "bank", "service", "wallet", "transaction", "security", "reset", "support"]
+    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "account", "password", "bank", "service", "wallet", "transaction", "security", "reset", "support", "scam", "phishing"]
     begruendung["verdaechtiges Wort im Host Namen"] = 0
 
     for i in liste_mit_verdaechtigen_woertern:
         if i in host:
-            begruendung["verdaechtiges Wort im Host Namen"] = 2
+            begruendung[f"verdaechtiges Wort im Host Namen: {i}"] = 2
             break
 
 def rule_words_path(path, begruendung):
@@ -61,17 +61,19 @@ def rule_words_path(path, begruendung):
         return
     
     path = path.lower()
+    woerter = []
       
-    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "password", "bank", "service", "wallet", "transaction", "reset"]
+    liste_mit_verdaechtigen_woertern = ["login", "signin", "verify", "update", "secure", "password", "bank", "service", "wallet", "transaction", "reset", "scam", "phishing"]
     begruendung["verdaechtiges Wort im Pfad"] = 0
     zaehler = 0
 
     for i in liste_mit_verdaechtigen_woertern:
         if i in path:
             zaehler += 1
+            woerter.append(i)
 
     if zaehler >= 2:
-        begruendung["verdaechtiges Wort im Pfad"] = 1
+        begruendung[f"verdaechtige Woerter im Pfad: {woerter}"] = 1
 
 def rule_number(host_name, begruendung):
     zahlen = ["1","2","3","4","5","6","7","8","9","0"]
