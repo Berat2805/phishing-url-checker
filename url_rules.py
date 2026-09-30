@@ -115,13 +115,33 @@ def rule_lookalike(host_name, begruendung):
                 begruendung["Lookalike gefunden"] = 2
                 return
 
+def rule_ip_adress(host ,begruendung):
+
+    if host == None:
+        return
+    
+    begruendung["IP-Adresse statt richtiger Domain"] = 0
+    host_aufgeteilt = split_host(host)
+
+    for i in host_aufgeteilt:
+        if i.isdigit() == False:
+            return
+        
+        zahl = int(i)
+
+        if zahl >= 0 and zahl <= 255:
+            begruendung["IP-Adresse statt richtiger Domain"] = 1
+        else:
+            begruendung["IP-Adresse statt richtiger Domain"] = 0
+            return
+
 def pruefeURL(url):     #funktion die alle regeln durchgeht und für jedes True ein punkt addiert 
     begruendung = {}
     url = url_ueberpruefen(url)
     url_teile = urlsplit(url)
     host_name_url = url_teile.hostname
     path_name_url = url_teile.path
-
+    
     rule_at(url, begruendung)
     rule_http(url, begruendung)
     rule_dots(url, begruendung)
@@ -129,5 +149,6 @@ def pruefeURL(url):     #funktion die alle regeln durchgeht und für jedes True 
     rule_words_path(path_name_url, begruendung)
     rule_number(host_name_url, begruendung)
     rule_lookalike(host_name_url, begruendung)
+    rule_ip_adress(host_name_url, begruendung)
 
     return begruendung
