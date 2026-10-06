@@ -16,18 +16,6 @@ Das Ziel des Ganzen ist es ein erklärbares Werkzeug zu bauen das sicheres Denke
 - Eine Benutzeroberfläche mit einer Eingabe für die Url und einer Ausgabe mit dem Ergebnis.
 - Keep the logic modular so additional rules or APIs can be added later.
 
-## Example Checks
-
-The checker can include rules such as:
-
-- URL uses an IP address instead of a domain.
-- URL contains the `@` symbol.
-- URL is unusually long.
-- URL contains many subdomains.
-- URL uses suspicious words such as `login`, `verify`, `secure`, `update`, or `account`.
-- URL comes from a known shortening service.
-- URL uses punycode or unusual character patterns.
-
 ## Project Structure
 
 ## Beschreibung
