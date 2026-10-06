@@ -16,9 +16,9 @@ Das Ziel des Ganzen ist es ein erklärbares Werkzeug zu bauen das sicheres Denke
 - Eine Benutzeroberfläche mit einer Eingabe für die Url und einer Ausgabe mit dem Ergebnis.
 - Keep the logic modular so additional rules or APIs can be added later.
 
-## Project Structure
+# Project Structure
 
-# Beschreibung
+## Beschreibung
 
 - main.py ist der Checker ohne UI und funktioniert nur über die Komandozeile im Terminal.
 - app.py ist die Version mit der UI und läuft über den Browser, sie läuft mit flask in Kombination mit der html Datei für die Webseite.
