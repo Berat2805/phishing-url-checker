@@ -18,7 +18,7 @@ Das Ziel des Ganzen ist es ein erklärbares Werkzeug zu bauen das sicheres Denke
 
 ## Project Structure
 
-## Beschreibung
+# Beschreibung
 
 - main.py ist der Checker ohne UI und funktioniert nur über die Komandozeile im Terminal.
 - app.py ist die Version mit der UI und läuft über den Browser, sie läuft mit flask in Kombination mit der html Datei für die Webseite.
